@@ -15,6 +15,13 @@
 	--white2: #fff;
 }
 
+.dark{
+	--black: #fff;
+	--black2: #444;
+	--white: #333;
+	--white2: #444;
+}
+
 body{
 	overflow-x: hidden!important;
 }
@@ -342,7 +349,7 @@ p{
 	font-size: 1.2rem;
 	margin-top: 20px;
 	font-weight: 600;
-	color: var(--black);
+	color: #000;
 	text-align: center;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -364,6 +371,10 @@ p{
 	color: #848c99;
 	font-weight: 500;
 	padding: 5px 0;
+}
+
+.dark .Skills .box h4{
+	color: var(--black);
 }
 
 .Skills .box .percent{
@@ -441,7 +452,7 @@ p{
 }
 
 .Projects .content .ProjBox .textBx h3{
-	color: #fff;
+	color: var(--white2);
 	font-size: 1rem;
 	padding: 0 15px;
 	text-align: center;
@@ -489,6 +500,7 @@ p{
 	background: var(--white2);
 	font-size: 16px;
 	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 8px;
 }
 
 .Contact .Contactform .row2 textarea{
@@ -510,8 +522,58 @@ p{
 	border-radius: 5px;
 }
 
+.ThemeSwitch{
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+	width: 50px;
+	height: 50px;
+	background: var(--black);
+	color: var(--white);
+	cursor: pointer;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dark .ThemeSwitch{
+	color: rgb(255, 215, 0);
+}
+
+.ThemeSwitch:before{
+	content: '\f186';
+	font-family: fontAwesome;
+	font-size: 1.4rem;
+}
+
+.dark .ThemeSwitch:before{
+	content: '\f185';
+	font-family: fontAwesome;
+	font-size: 1.4rem;	
+}
+
+.ThemeSwitch:after{
+	content: 'Switch to Dark Mode';
+	position: absolute;
+	padding: 20px;
+	left: 40px;
+	font-size: 1rem;
+	color: var(--black);
+	white-space: nowrap;
+	font-weight: 300;
+	letter-spacing: 1px;
+	pointer-events: none;
+}
+
+.dark .ThemeSwitch:after{
+	content: 'Switch to Light Mode';	
+	color: rgb(255, 215, 0);
+}
+
 @media(max-width: 992px)
-{		
+{	
+
 	.navigation{
 		width: 0;
 	}
@@ -528,6 +590,15 @@ p{
 
 	.main.active{
 		left: 100%;
+		width: 0;
+	}
+	
+	.main.active .Home, 
+	.main.active .About, 
+	.main.active .Skills, 
+	.main.active .Projects, 
+	.main.active .Contact{
+		display: none;
 	}
 
 	.main .topbar{
@@ -536,7 +607,6 @@ p{
 		left: 0;
 		padding: 0 20px;
 	}
-
 
 	.navigation ul{
 		padding: 20px 20px;

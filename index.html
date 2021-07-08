@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport", content="width=device-width, initial-scale=1.0">
+	<meta name="viewport", content="width=device-width , initial-scale=1.0">
 	<title>Portfolio</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -17,6 +17,7 @@
 				<li><a href="#Projects" onclick="toggleMenu();"><i class="fa fa-briefcase" aria-hidden="true"></i>Projects</a></li>
 				<li><a href="#Contact" onclick="toggleMenu();"><i class="fa fa-phone-square" aria-hidden="true"></i>Contact</a></li>
 			</ul>
+			<div class="ThemeSwitch"></div>
 		</div>
 		<div class="main">
 			<div class="topbar">
@@ -187,6 +188,9 @@
 		let topbar = document.querySelector('.topbar');
 		let navigation = document.querySelector('.navigation');
 		let main = document.querySelector('.main');
+		let ThemeSwitch = document.querySelector('.ThemeSwitch');
+		let body= document.querySelector('body');
+
 		toggle.onclick = function(){
 			toggle.classList.toggle('active');
 			topbar.classList.toggle('active');
@@ -199,6 +203,10 @@
 			let main = document.querySelector('.main');
 			navigation.classList.remove('active');
 			main.classList.remove('active');
+		}
+
+		ThemeSwitch.onclick = function(){
+			body.classList.toggle('dark');
 		}
 
 	</script>
