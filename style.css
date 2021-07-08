@@ -53,6 +53,7 @@ body{
 	position: relative;
 	width: 100%;
 	list-style: none;
+	font-size: 1.2rem;
 }
 
 .navigation ul li a{
@@ -68,6 +69,10 @@ body{
 	font-weight: 500;
 	letter-spacing: 2px;
 	opacity: 0.5;
+}
+
+.navigation ul li a i{
+	padding-right: 10px; 
 }
 
 .navigation ul li a:hover{
@@ -93,8 +98,9 @@ body{
 	top: 0;
 	width: calc(100% - 300px);
 	left: 300px;
-	background: var(--white2);
-	border-bottom: 1px solid rgba(0,0,0,0.05);
+	background: rgb(255,116,42);
+	background: rgb(102,42,255);
+	background: linear-gradient(90deg, rgba(102,42,255,1) 0%, rgba(220,122,242,0.9951330874146533) 43%, rgba(108,116,249,1) 100%, rgba(0,212,255,1) 100%);
 	height: 60px;
 	padding: 0 40px;
 	display: flex;
@@ -110,7 +116,7 @@ body{
 }
 
 .main .topbar .logo{
-	color: var(--black);
+	color: var(--white);
 	font-weight: 700;
 	text-decoration: none;
 	font-size: 1.4rem;
@@ -127,7 +133,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	font-size: 24px;
-	color: var(--black)
+	color: var(--white);
 }
 
 section{
@@ -139,6 +145,8 @@ section{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .Home .content{
@@ -164,6 +172,10 @@ section{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.Home h3, .Home p{
+	color: var(--white);
 }
 
 h3{
@@ -254,7 +266,10 @@ p{
 	height: 1px;
 	background: var(--black);
 }
-
+.About{
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(149,122,242,0.9951330874146533) 0%, rgba(0,212,255,1) 100%);
+}
 .About .content{
 	display: flex;
 	justify-content: space-between;
@@ -272,11 +287,13 @@ p{
 .About .content .textBox p{
 	font-size: 1.4rem;
 	line-height: 40px;
+	color: var(--white);
 }
 
 .About .content .textBox p span{
 	font-size: 2rem;
 	font-weight: 800;
+	color: var(--white);
 }
 
 .About .content .imgx{
@@ -308,6 +325,13 @@ p{
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	border-radius: 5px;
+}
+
+.Skills .content .SkillBox:hover{
+	outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 20px #9ecaed;
 }
 
 .Skills .content .SkillBox img{
@@ -357,6 +381,11 @@ p{
 	height: 100%;
 	background-color: #03a9f4;
 	border-radius: 10px;
+}
+
+.Projects{
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,158,125,0.9951330874146533) 0%, rgba(0,212,255,1) 100%);
 }
 
 .Projects .content{
@@ -423,6 +452,8 @@ p{
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(82,176,194,0.9951330874146533) 0%, rgba(0,212,255,1) 100%);
 }
 
 .Contact .Contactform{
